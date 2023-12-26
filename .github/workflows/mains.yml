@@ -1,4 +1,4 @@
-name: CodeQL
+name: Pull
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        language: [javascript, java, python] # Add other languages if needed
+        language: [python] # Add other languages if needed
 
     steps:
     - name: Checkout repository
