@@ -13,6 +13,8 @@ jobs:
        run: echo "${{ toJSON(github.event) }}"
        shell: bash
 
+     - name: Checkout code
+       uses: actions/checkout@v2
        
      - name: Create comment
        uses: peter-evans/create-or-update-comment@v1
@@ -25,3 +27,4 @@ jobs:
 
             [1]: https://github.com/peter-evans/create-or-update-comment
           reactions: '+1'
+          token: ${{ secrets.PAT_TOKEN }}
